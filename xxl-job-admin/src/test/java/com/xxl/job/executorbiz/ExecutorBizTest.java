@@ -50,12 +50,13 @@ public class ExecutorBizTest {
 
     @Test
     public void run(){
-        ExecutorBiz executorBiz = new ExecutorBizClient(addressUrl, accessToken);
+//        ExecutorBiz executorBiz = new ExecutorBizClient(addressUrl, accessToken);
+        ExecutorBiz executorBiz = new ExecutorBizClient("http://127.0.0.1:7777", accessToken);
 
         // trigger data
         final TriggerParam triggerParam = new TriggerParam();
         triggerParam.setJobId(1);
-        triggerParam.setExecutorHandler("demoJobHandler");
+        triggerParam.setExecutorHandler("ooo");
         triggerParam.setExecutorParams(null);
         triggerParam.setExecutorBlockStrategy(ExecutorBlockStrategyEnum.COVER_EARLY.name());
         triggerParam.setGlueType(GlueTypeEnum.BEAN.name());
